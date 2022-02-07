@@ -9,7 +9,7 @@ client.db = require("quick.db");
 client.on("ready", async () => {
   console.log(`ready!`);
   client.user
-    .setActivity(`Do >Help`)
+    .setActivity(`Do v!help`)
     .catch(error => console.log(error));
 });
 
