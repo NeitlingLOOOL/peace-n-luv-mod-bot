@@ -15,7 +15,7 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
 
-    if (!Member) return message.channel.send(`Please Mention A User!`);
+    if (!Member) return message.channel.send(`**Please Mention A User To Warn Them ${message.author.tag}!**`);
 
     let Reason = args.slice(1).join(" ");
 

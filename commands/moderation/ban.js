@@ -23,13 +23,13 @@ module.exports = {
       );
 
     if (!message.guild.members.cache.get(Member.id))
-      return message.channel.send(`Please Mention A Valid Member!`);
+      return message.channel.send(`**Please Mention A Valid Member!**`);
 
     if (Member.id === message.author.id)
-      return message.channel.send(`You Can't Ban Your Self!`);
+      return message.channel.send(`**You Can't Ban Yourself idiot**`);
 
     if (Member.id === client.user.id)
-      return message.channel.send(`Please Don't Ban Me ;-;`);
+      return message.channel.send(`**You can't ban me!**`);
 
     if (Member.id === message.guild.owner.user.id)
       return message.channel.send(`You Can't Ban Owner Of Server!`);
@@ -38,7 +38,7 @@ module.exports = {
 
     let User = message.guild.member(Member);
 
-    if (!User.bannable) return message.channel.send(`I Can't Ban That Member!`);
+    if (!User.bannable) return message.channel.send(`**I Can't Ban That Member!**`);
 
     try {
       console.log(`Member Is Going To Get Ban!`);

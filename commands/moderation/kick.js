@@ -19,27 +19,27 @@ module.exports = {
 
     if (!Member)
       return message.channel.send(
-        `Please Mention A Member That You Want To Kick!`
+        `**Bruh, say who you want to kick.**`
       );
 
     if (!message.guild.members.cache.get(Member.id))
       return message.channel.send(`Please Mention A Valid Member!`);
 
     if (Member.id === message.author.id)
-      return message.channel.send(`You Can't Kick Your Self!`);
+      return message.channel.send(`**You Can't Kick Your Self!**`);
 
     if (Member.id === client.user.id)
-      return message.channel.send(`Why Do You Want To kick me?`);
+      return message.channel.send(`**Why Do You Want To kick me? :frowning: **`);
 
     if (Member.id === message.guild.owner.user.id)
-      return message.channel.send(`You Can't Kick Owner Of Server!`);
+      return message.channel.send(`**You Can't Kick Owner Of Server!**`);
 
     let Reason = args.slice(1).join(" ");
 
     let User = message.guild.member(Member);
 
     if (!User.kickable)
-      return message.channel.send(`I Can't Kick That Member!`);
+      return message.channel.send(`**I Can't Kick That Member!**`);
 
     try {
       console.log(`Member Is Going To Get Kick!`);

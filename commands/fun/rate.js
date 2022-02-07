@@ -13,12 +13,12 @@ module.exports = {
     let Content = args.join(" ");
 
     if (!Content)
-      return message.channel.send(`Please Give Me Something To Rate!`);
+      return message.channel.send(`**Please Give Me Something To Rate!**`);
 
     let embed = new Discord.MessageEmbed()
       .setColor(Color)
-      .setTitle(`I Rate`)
-      .setDescription(`${Math.floor(Math.random() * 11)}/10 To ${Content}`)
+      .setTitle(`I Rate ${Content}..`)
+      .setDescription(`${Math.floor(Math.random() * 11)}/10`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 

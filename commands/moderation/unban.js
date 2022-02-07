@@ -12,21 +12,21 @@ module.exports = {
     message.delete();
     if (!message.member.hasPermission("BAN_MEMBERS"))
       return message.channel.send(
-        `You Don't Have Permission To Use This Command!`
+        `**You Don't Have Permission To Use This Command ${message.author.tag}!**`
       );
 
     if (!args[0])
       return message.channel.send(
-        `Please Give Me Member ID That You Want To Unban!`
+        `**Please Give Me Member ID That You Want To Unban!**`
       );
 
-    if (isNaN(args[0])) return message.channel.send(`Please Give Me Valid ID!`);
+    if (isNaN(args[0])) return message.channel.send(`**Please Give Me Valid ID!**`);
 
     if (args[0] === message.author.id)
-      return message.channel.send(`You Are Already Unban!`);
+      return message.channel.send(`**You Are Already Unbanned!**`);
 
     if (args[0] === message.guild.owner.user.id)
-      return message.channel.send(`Server Owner Is Already Unban!`);
+      return message.channel.send(`**Server Owner Is Already Unbanned!**`);
 
     if (args[0] === client.user.id)
       return message.channel.send(`I Am Already Unban!`);
@@ -45,7 +45,7 @@ module.exports = {
 
     if (!Member)
       return message.channel.send(
-        "Please Give Valid Member ID Or Member Is Not Banned!"
+        "**Please Give Valid Member ID Or Member Is Not Banned!**"
       );
 
     let Reason = args.slice(1).join(" ") || "No Reason Provided!";
