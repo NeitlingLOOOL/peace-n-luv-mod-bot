@@ -29,7 +29,7 @@ module.exports = {
       return message.channel.send(`You Can't Kick Your Self!`);
 
     if (Member.id === client.user.id)
-      return message.channel.send(`Please Don't Kick Me ;-;`);
+      return message.channel.send(`Why Do You Want To kick me?`);
 
     if (Member.id === message.guild.owner.user.id)
       return message.channel.send(`You Can't Kick Owner Of Server!`);

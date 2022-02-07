@@ -22,7 +22,7 @@ module.exports = {
       );
 
     if (Member.user.id === message.author.id)
-      return message.channel.send(`You Can't Hack Your Self Lmao!`);
+      return message.channel.send(`**Enter someone you want to hack!** ***(>hack @person)***`);
 
     let embed = new MessageEmbed()
       .setColor(Color)
@@ -32,7 +32,7 @@ module.exports = {
           Member.user.id
         }`
       )
-      .setFooter(`Jk Don't Take It Serious Its Just Random Generated Strings!`)
+      .setFooter(`you thought, L BOZO`)
       .setTimestamp();
 
     await message.channel.send(`Hacking Started! Hacking ${Member.user.username}`);
