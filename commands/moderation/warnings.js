@@ -23,9 +23,9 @@ module.exports = {
 
     let embed = new MessageEmbed()
       .setColor(Color)
-      .setTitle(`Member Warnings!`)
+      .setTitle(`Member Warns:`)
       .setDescription(`${Member.user.username} Has ${Warnings || "0"} Warnings!`)
-      .setFooter(`Requested by ${message.author.username}`)
+      .setFooter(`Command by ${message.author.username}`)
       .setTimestamp();
 
     message.channel.send(embed);

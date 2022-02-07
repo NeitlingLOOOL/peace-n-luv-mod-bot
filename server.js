@@ -9,7 +9,7 @@ client.db = require("quick.db");
 client.on("ready", async () => {
   console.log(`ready!`);
   client.user
-    .setActivity(`Thean Is Mommy (CREATED BY NEITLING)`)
+    .setActivity(`Do >Help`)
     .catch(error => console.log(error));
 });
 

@@ -12,7 +12,7 @@ module.exports = {
     message.delete();
     if (!message.member.hasPermission("KICK_MEMBERS"))
       return message.channel.send(
-        `You Don't Have Permission To Use This Command!`
+        `You Don't Have Permission To Kick People! (${message.author.tag})`
       );
 
     let Member = message.mentions.users.first();
@@ -23,7 +23,7 @@ module.exports = {
       );
 
     if (!message.guild.members.cache.get(Member.id))
-      return message.channel.send(`Please Mention A Valid Member!`);
+      return message.channel.send(`**Please Mention A Valid Member!**`);
 
     if (Member.id === message.author.id)
       return message.channel.send(`**You Can't Kick Your Self!**`);

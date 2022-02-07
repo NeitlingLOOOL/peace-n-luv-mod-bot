@@ -15,7 +15,7 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
 
-    if (!Member) return message.channel.send(`**Please Mention A User To Warn Them ${message.author.tag}!**`);
+    if (!Member) return message.channel.send(`**Please Mention A User To Warn Them! (${message.author.tag})**`);
 
     let Reason = args.slice(1).join(" ");
 
@@ -28,12 +28,11 @@ module.exports = {
     let embed = new MessageEmbed()
       .setColor(Color)
       .setTitle(`Member Warned!`)
-      .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
-      .addField(`Warned Member`, `${Member.user.tag} (${Member.user.id})`)
+      .addField(`Moderator`, `${message.author.tag}`)
+      .addField(`Warned Member`, `${Member.user.tag}`)
       .addField(`Now Member Warnings`, Warnings)
       .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
-      .setFooter(`Requested by ${message.author.username}`)
-      .setTimestamp();
+     
 
     message.channel.send(embed);
 
