@@ -9,7 +9,7 @@ client.db = require("quick.db");
 client.on("ready", async () => {
   console.log(`ready!`);
   client.user
-    .setActivity(`Servers : ${await client.guilds.cache.size} | Users : ${await client.users.cache.size}`, { type: "PLAYING" })
+    .setActivity(`Thean Is mom')
     .catch(error => console.log(error));
 });
 
@@ -73,7 +73,7 @@ client.on("message", async message => {
   if (command) {
     if (!message.guild.me.hasPermission("ADMINISTRATOR"))
       return message.channel.send(
-        "I Don't Have Enough Permission To Use This Or Any Of My Commands | Require : Administrator"
+        "I Don't Have Permissions To Do That Command. I need ADMINTRATOR."
       );
     command.run(client, message, args);
   }
