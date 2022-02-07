@@ -15,17 +15,17 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
 
-    if (!Member) return message.channel.send(`Please Mention A User To Mute! `);
+    if (!Member) return message.channel.send(`**Please Mention A User To Mute!** (${message.author.tag}) `);
 
     let Role = message.guild.roles.cache.find(role => role.name === "Muted").id;
 
     if (!Role)
       return message.channel.send(
-        `There Is No Mute Role, So Member Is Not Muted Anymore!`
+        `**There Is No Mute Role, So Member Is Not Muted Anymore!**`
       );
 
     if (!Member.roles.cache.has(Role)) {
-      return message.channel.send(`Member Is Already Unmuted!`);
+      return message.channel.send(`**Member Is Already Unmuted!**`);
     }
 
     let Embed = new MessageEmbed()

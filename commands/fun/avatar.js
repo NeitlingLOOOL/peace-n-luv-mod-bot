@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 const { Color } = require("../../config.js");
 
 module.exports = {
-  name: "avatar",
+  name: "av",
   aliases: ["icon", "pfp"],
   description: "Show Member Avatar!",
   usage: "Avatar | <Mention Member>",
