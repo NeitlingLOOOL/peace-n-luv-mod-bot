@@ -3,8 +3,8 @@ const { MessageEmbed } = require("discord.js");
 const { Color } = require("../../config.js");
 
 module.exports = {
-  name: "av",
-  aliases: ["icon", "pfp"],
+  name: "avatar",
+  aliases: ["icon", "av", "pfp"],
   description: "Show Member Avatar!",
   usage: "Avatar | <Mention Member>",
   run: async (client, message, args) => {
