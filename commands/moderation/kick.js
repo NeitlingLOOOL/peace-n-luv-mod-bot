@@ -51,7 +51,7 @@ module.exports = {
         .setColor(Color)
         .setTitle(`Member Kicked!`)
         .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
-        .addField(`Kicked Member`, `${Member.tag} (${Member.id})`)
+        .addField(`Kicked Member`, `${Member.tag}`)
         .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
         .setFooter(`Requested by ${message.author.username}`)
         .setTimestamp();
