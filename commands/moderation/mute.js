@@ -15,7 +15,7 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
 
-    if (!Member) return message.channel.send(`Please Mention A User!`);
+    if (!Member) return message.channel.send(`who you tryna mute ${message.author.tag} `);
 
     let Role = message.guild.roles.cache.find(role => role.name === "Muted").id;
 
@@ -25,7 +25,7 @@ module.exports = {
       );
 
     if (Member.roles.cache.has(Role)) {
-      return message.channel.send(`Member Is Already Muted!`);
+      return message.channel.send(`**Yo "${message.author.tag}" he's already muted.**`);
     }
 
     let Reason = args.slice(1).join(" ");
