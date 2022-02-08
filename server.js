@@ -73,7 +73,7 @@ client.on("message", async message => {
   if (command) {
     if (!message.guild.me.hasPermission("ADMINISTRATOR"))
       return message.channel.send(
-        "I Don't Have Permissions To Do That Command. I need ADMINTRATOR."
+        "**I Don't Have Permissions To Do That Command. I need ADMINTRATOR.**"
       );
     command.run(client, message, args);
   }
