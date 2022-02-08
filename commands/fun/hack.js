@@ -22,7 +22,7 @@ module.exports = {
       );
 
     if (Member.user.id === message.author.id)
-      return message.channel.send(`**Enter someone you want to hack!** ***(>hack @person)***`);
+      return message.channel.send(`**Enter someone you want to hack!** ***(v!hack @person)***`);
 
     let embed = new MessageEmbed()
       .setColor(Color)
