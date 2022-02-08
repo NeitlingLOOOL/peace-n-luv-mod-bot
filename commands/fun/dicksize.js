@@ -40,9 +40,9 @@ module.exports = {
 
     let embed = new MessageEmbed()
       .setColor(Color)
-      .setTitle(`Pp v2 Machine`)
-      .setDescription(`${Member.user.username} pp Size Is\n${Result}`)
-      .setFooter(`Requested by ${message.author.username}`)
+      .setTitle(`${Member.user.username} PP Size Is:`)
+      .setDescription(` \n${Result}`)
+      .setFooter(`Command By ${message.author.username}`)
       .setTimestamp();
 
     message.channel.send(embed);

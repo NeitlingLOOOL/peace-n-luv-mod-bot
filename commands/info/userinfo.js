@@ -25,7 +25,7 @@ module.exports = {
       .setThumbnail(member.user.displayAvatarURL())
       .addField("Full Name", member.user.tag, true)
       .addField("ID", `${member.id}`, true)
-      .addField("Status", statuses[member.presence.status], true)
+      .addField("Status", statuses[member.presence.status], false)
       .addField(
         `Roles Count`,
         message.guild.members.cache.get(member.user.id).roles.cache.size ||
