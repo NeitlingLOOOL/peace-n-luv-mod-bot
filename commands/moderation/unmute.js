@@ -9,7 +9,7 @@ module.exports = {
   usage: "Unmute <Mention User>",
   run: async (client, message, args) => {
     //Start
-    message.delete();
+    
 
     let Member =
       message.mentions.members.first() ||

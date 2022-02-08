@@ -10,7 +10,7 @@ module.exports = {
   usage: "Weather <Location>",
   run: async (client, message, args) => {
     //Start
-    message.delete();
+  
 
     if (!args[0]) return message.channel.send("Please Give Location!");
 

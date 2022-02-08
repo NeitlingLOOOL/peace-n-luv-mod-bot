@@ -10,7 +10,7 @@ module.exports = {
   usage: "Randomnumber",
   run: async (client, message, args) => {
     //Start
-    message.delete();
+   
     let result = Math.floor(Math.random() * 101);
 
     const embed = new MessageEmbed()

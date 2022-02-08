@@ -13,7 +13,7 @@ module.exports = {
   run: async (client, message, args) => {
     //Start
 
-    message.delete();
+    
     
     let Content = args.join(" ");
 
@@ -31,7 +31,7 @@ module.exports = {
 
     message.channel.send(embed);
 
-    message.delete();
+    
 
     //End
   }

@@ -9,7 +9,7 @@ module.exports = {
   usage: "Userinfo | <Mention User>",
   run: async (client, message, args) => {
     //Start
-    message.delete();
+    
     let member = message.mentions.users.first() || message.member;
 
     const statuses = {

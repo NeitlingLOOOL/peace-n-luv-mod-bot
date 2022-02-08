@@ -10,7 +10,7 @@ module.exports = {
   usage: "Meme",
   run: async (client, message, args) => {
     //Start
-    message.delete();
+    
     fetch("https://meme-api.herokuapp.com/gimme")
       .then(res => res.json())
       .then(json => {

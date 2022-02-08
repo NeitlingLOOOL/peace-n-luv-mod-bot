@@ -9,7 +9,7 @@ module.exports = {
   usage: "Coinflip",
   run: async (client, message, args) => {
     //Start
-    message.delete();
+    
     const coins = ["Heads", "Tails", "Center"];
 
     let result = Math.floor(Math.random() * coins.length);

@@ -9,7 +9,7 @@ module.exports = {
   usage: "Warn <Mention User> | <Reason>",
   run: async (client, message, args) => {
     //Start
-    message.delete();
+    
 
     let Member =
       message.mentions.members.first() ||
