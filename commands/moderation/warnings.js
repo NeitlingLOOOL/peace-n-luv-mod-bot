@@ -4,7 +4,7 @@ const { Color } = require("../../config.js");
 
 module.exports = {
   name: "warnings",
-  aliases: ["warning"],
+  aliases: ["warnings"],
   description: "Show User Warnings!",
   usage: "Warnings <Mention User>",
   run: async (client, message, args) => {
@@ -15,7 +15,7 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
 
-    if (!Member) return message.channel.send(`Please Mention A User!`);
+    if (!Member) return message.channel.send(`**Please Mention A User!**`);
 
     let Warnings = client.db.get(
       `Warnings_${message.guild.id}_${Member.user.id}`
