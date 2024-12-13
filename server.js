@@ -82,4 +82,4 @@ client.on("message", async message => {
   );
 });
 
-client.login(Token); MTMxNzE3ODYzNjY1MDAyNTA0MA.GenRRn.CwFd6tWlvyfai2Gd2PGlQONq9GC3BzO-yJo1go
+client.login(Token);
