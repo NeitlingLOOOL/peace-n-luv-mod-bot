@@ -9,7 +9,7 @@ client.db = require("quick.db");
 client.on("ready", async () => {
   console.log(`ready!`);
   client.user
-    .setActivity(`Do v!help`)
+    .setActivity(`slatt`)
     .catch(error => console.log(error));
 });
 
@@ -82,4 +82,4 @@ client.on("message", async message => {
   );
 });
 
-client.login(Token); "MTMxNzE3ODYzNjY1MDAyNTA0MA.GHRr-q.l8mqodyDRU4dE0pZxLTPX01bUZO2GQOYFtGPM8"
+client.login(Token); 
